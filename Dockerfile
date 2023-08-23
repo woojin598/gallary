@@ -1,4 +1,4 @@
-FROM openjdk:17-ea-11-jdk-slim
-VOLUME /tmp
-COPY target/item-service-1.0.jar ItemService.jar
-ENTRYPOINT ["java", "-jar", "ItemService.jar"]
+FROM openjdk:11-jdk
+WORKDIR /app
+COPY target/*.jar app.jar
+CMD ["java", "-Dspring.profiles.active=prod", "-jar", "app.jar"]

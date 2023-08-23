@@ -15,9 +15,10 @@ spring:
     hibernate:
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
-      ddl-auto: update
-    show-sql: true
-    generate-ddl: true
+      ddl-auto: none
+    properties:
+      hibernate: 
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
         
 
   datasource:
@@ -26,7 +27,6 @@ spring:
     username: tj705
     password: tj705
       
-
  
     
     
