@@ -8,6 +8,7 @@ class ItemServiceApplicationTests {
 
 	@Test
 	void contextLoads() {
+		System.out.println(11);
 	}
 
 }
